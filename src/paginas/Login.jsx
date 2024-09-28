@@ -46,11 +46,40 @@ const Login = () => {
 
   return (
     <>
-        <h1 className="text-sky-600 font-black text-6xl capitalize">
+    <div className='flex'>
+      <div>
+        <img
+          src="/img/logo.png"
+          alt="No Image"
+          width={125}
+          height={125}
+        />
+
+      </div>
+
+
+        <h1 className="text-sky-600 font-black text-4xl capitalize">
           Inicia Sesión Y administra tus 
           <span className="text-slate-700"> Proyectos</span>
         </h1>
 
+    </div>
+
+        <p className="text-gray-700 bg-gray-100 p-4 mt-2 rounded-lg shadow-md text-center">
+          <strong className="text-black">
+            Este es un sitio de prueba de mi{' '}
+            <a 
+              href="https://portafolio-tomas-lona.netlify.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Portafolio Web
+            </a>
+            :{' '}
+          </strong> 
+          Puede ingresar con el usuario <strong>invitado@invitado.com</strong> y contraseña <strong>Cielo123</strong>, o si lo desea, puede crear su propia cuenta.
+        </p>
         {msg && <Alerta alerta={alerta}/>}
 
         <form 
@@ -67,7 +96,7 @@ const Login = () => {
                   <input 
                       id="email"
                       type="email"
-                      placeholder="Email de Registro"
+                      placeholder="invitado@invitado.com"
                       className="w-full mt-3 p-3 border rounded bg-gray-50"
                       value={email}
                       onChange={ e=> setEmail(e.target.value)}
@@ -85,7 +114,7 @@ const Login = () => {
                   <input 
                       id="password"
                       type="password"
-                      placeholder="Password"
+                      placeholder="Cielo123"
                       className="w-full mt-3 p-3 border rounded bg-gray-50"
                       value={password}
                       onChange={ e=> setPassword(e.target.value)}
